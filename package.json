@@ -1,0 +1,7 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Peter Schrammen <b.schrammen@gmail.com>",
+  "license": "MIT"
+}
