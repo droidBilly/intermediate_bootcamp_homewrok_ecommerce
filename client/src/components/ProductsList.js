@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
 
 class ProductsList extends PureComponent {
   static propTypes = {
@@ -37,4 +38,10 @@ class ProductsList extends PureComponent {
   }
 }
 
-export default ProductsList
+const mapStateToProps = function (state) {
+  return {
+    products: state.products
+  }
+}
+
+export default connect(mapStateToProps)(ProductsList)
