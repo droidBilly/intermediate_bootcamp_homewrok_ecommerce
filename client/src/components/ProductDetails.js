@@ -14,9 +14,9 @@ class ProductDetails extends PureComponent {
   }
 }
 
-const mapStateToProps = function (state) {
+const mapStateToProps = function (state, props) {
   return {
-    product: state.products.find(product => product.id === 7)
+    product: state.products.find(p => p.id === Number(props.match.params.id))
   }
 }
 
