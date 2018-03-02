@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import { fetchAllProducts } from '../actions/fetchProducts'
-
+import {Link} from 'react-router-dom'
 
 class ProductsList extends PureComponent {
   static propTypes = {
@@ -34,7 +34,9 @@ class ProductsList extends PureComponent {
           <tbody>
             { products.map(product => (<tr key={product.id}>
               <td>{product.id}</td>
-              <td>{product.name}</td>
+              <td>
+                <Link to={ `/products/${product.id}` }>{product.name}</Link>
+              </td>
               <td>&euro; {product.price}.00</td>
             </tr>)) }
           </tbody>

@@ -16,7 +16,8 @@ class ProductDetails extends PureComponent {
     return (
       <div>
         <h1>{ product.name }</h1>
-        <p> Price: {product.price} €</p>
+        <p>Price: {product.price} €</p>
+        <p>{product.description}</p>
       </div>
     )
   }
