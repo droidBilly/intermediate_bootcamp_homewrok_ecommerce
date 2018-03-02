@@ -34,7 +34,7 @@ const Product = sequelize.define('product', {
 })
 
 app.get('/products', (request, response) => {
-  Product.findAll()
+  Product.findAll({ attributes: ['id', 'name', 'price' ]})
     .then(result => {
       response.send( result )
     })
